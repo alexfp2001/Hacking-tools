@@ -1,0 +1,31 @@
+TOOL USAGE MANUAL:
+
+-pid <ProcessID>
+
+Specifies the process ID for which to generate a dump.
+
+Example: Practice3.exe -pid 1234 dump_name.dmp
+
+-name <ProcessName>
+
+Generates a dump for the first process that matches the provided name.
+
+Example: Practice3.exe -name "exampleProcess" dump_name.dmp
+
+-r
+
+Performs the dump of a cloned process instead of the original process. Useful for minimizing disruption to the running process.
+
+Example: Practice3.exe -pid 1234 -r dump_name.dmp
+
+-p
+
+Indicates that the program should try to run with elevated privileges. Recommended if access issues are encountered when trying to dump protected or system processes.
+
+Example: Practice3.exe -pid 1234 -p dump_name.dmp
+
+-S <ServerAddress:Port>
+
+Sends the generated dump to a specific server instead of writing it to the local disk.
+
+Example: Practice3.exe -pid 1234 -S "192.168.1.100:8080"
